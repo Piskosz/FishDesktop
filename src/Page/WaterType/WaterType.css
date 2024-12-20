@@ -1,0 +1,55 @@
+/* WaterTypeChoice.css */
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./ryba2.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  
+  .headerContainer {
+    text-align: center;
+  }
+  
+  .headerText {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .button {
+    background-color: rgba(0, 0, 255, 0.7);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: rgba(0, 0, 255, 0.9);
+  }
+  

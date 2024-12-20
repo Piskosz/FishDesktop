@@ -1,0 +1,65 @@
+/* Tło ogólne */
+.maps-commercial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  background: url('./ryba2.jpg') no-repeat center center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Nagłówek */
+.maps-commercial-header-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.maps-commercial-header {
+  font-size: 36px;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Siatka kart regionów */
+.maps-commercial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Karta regionu */
+.maps-commercial-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 30px 20px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.maps-commercial-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background-color: #f48fb1;
+}
+
+.maps-commercial-card-title {
+  font-size: 20px;
+  color: #0072ff;
+  margin: 0;
+  font-weight: bold;
+}
