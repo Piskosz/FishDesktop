@@ -1,0 +1,110 @@
+.background {
+    width: 100%;
+    height: 100vh;
+    background-image: url('./ryba2.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    color: white;
+    overflow: auto;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    color: white;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+  
+  .headerContainer {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .headerText {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  .noteItem {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .noteText {
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    word-wrap: break-word;
+    color: white;
+    margin-right: 10px;
+  }
+  
+  .deleteButton {
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .deleteButton:hover {
+    background-color: #c0392b;
+  }
+  
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    position: fixed; 
+    bottom: 20px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 10;
+  }
+  
+  .input {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    color: #333;
+    background-color: white;
+  }
+  
+  .addButton {
+    background-color: #2ecc71;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .addButton:hover {
+    background-color: #27ae60;
+  }
+  
