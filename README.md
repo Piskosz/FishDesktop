@@ -1,88 +1,69 @@
-Aplikacja Wędkarska
-Opis Projektu
-Aplikacja wędkarska to projekt mający na celu ułatwienie organizacji wypraw wędkarskich. Użytkownicy mogą rejestrować swoje konto, zarządzać notatkami dotyczącymi wędkowania, sprawdzać prognozę pogody na podstawie GPS oraz korzystać z kalendarza brań. Dodatkowo, aplikacja oferuje możliwość przeglądania łowisk komercyjnych i okręgów PZW w wybranych województwach.
 
-Architektura Aplikacji
-Frontend: React
-Główne widoki użytkownika:
+# Aplikacja Wędkarska
 
-Strona główna: Informacje o aplikacji i opcje rejestracji/logowania.
-Notatki: Tworzenie i zarządzanie zapiskami z wypraw wędkarskich.
-Pogoda GPS: Wyświetlanie prognozy pogody dla lokalizacji użytkownika.
-Kalendarz brań: Informacje o najlepszych dniach i godzinach do wędkowania.
-System autoryzacji:
+## Opis projektu
+Aplikacja Wędkarska to projekt stworzony w ramach przedmiotu "Technologia aplikacji webowych II". 
+Aplikacja umożliwia użytkownikom przeglądanie prognozy pogody, prowadzenie notatek z wypraw wędkarskich, a także dostęp do kalendarza brań oraz szczegółowych informacji o łowiskach komercyjnych i okręgach Polskiego Związku Wędkarskiego (PZW).
 
-Rejestracja i logowanie użytkownika za pomocą JWT.
-Ochrona funkcji aplikacji przed dostępem osób niezalogowanych.
-Technologie:
+## Architektura aplikacji
 
-React.js: Tworzenie interfejsu użytkownika.
-Axios: Komunikacja z API backendu.
-JWT: Mechanizm autoryzacji.
-CSS/SCSS: Stylowanie aplikacji.
-Backend: Spring Boot
-Funkcjonalności:
+### Frontend
+- **Technologie:** React.js, Axios, JWT, CSS/SCSS.
+- **Funkcjonalności:**
+  - Strona główna z informacjami o aplikacji i przyciskiem rejestracji/logowania.
+  - Tworzenie i przeglądanie notatek z wypraw wędkarskich.
+  - Wyświetlanie prognozy pogody na podstawie lokalizacji GPS.
+  - Kalendarz brań - prezentacja dni i godzin optymalnych na wędkowanie.
+  - System autoryzacji użytkowników za pomocą JWT.
 
-Rejestracja użytkownika.
-Logowanie i generowanie tokenu JWT.
-Zarządzanie notatkami (dodawanie/usuwanie).
-Technologie:
+### Backend
+- **Technologie:** Spring Boot, MySQL.
+- **Funkcjonalności:**
+  - Rejestracja użytkownika.
+  - Logowanie i generowanie tokenów JWT.
+  - Dodawanie oraz usuwanie notatek.
 
-Spring Boot: Tworzenie backendowego API REST.
-MySQL: Przechowywanie danych użytkowników, notatek, lokalizacji GPS, prognoz pogody i kalendarza brań.
-Przypadki użycia
-1. Dla osoby niezalogowanej:
-Rejestracja: Utworzenie konta poprzez wypełnienie formularza.
-Logowanie: Dostęp do aplikacji dla osób posiadających konto.
-2. Dla osoby zalogowanej:
-Tworzenie notatek: Zapisywanie szczegółów wypraw wędkarskich.
-Wyświetlanie pogody: Prognoza na podstawie lokalizacji GPS.
-Kalendarz brań: Informacje o optymalnych dniach na wędkowanie.
-Zarządzanie łowiskami:
-Łowiska komercyjne: Informacje o najlepszych łowiskach w wybranym województwie.
-Okręgi PZW: Szczegóły okręgów PZW i ich regulaminy.
-Wylogowanie: Bezpieczne opuszczenie aplikacji.
-Diagram Przypadków Użycia
-Diagram przedstawia interakcje pomiędzy aktorami (Gościem i Użytkownikiem) a funkcjami aplikacji, w tym panelu użytkownika, notatnika, prognozy pogody, kalendarza brań i map łowisk.
+## Przypadki użycia
 
-Baza Danych
-Technologia
-MySQL: System relacyjnych baz danych wykorzystywany do przechowywania danych użytkowników i notatek.
-Struktura bazy danych
-Tabele:
-users: Przechowuje dane o użytkownikach (np. imię, e-mail, hasło).
-notes: Przechowuje notatki dotyczące wypraw wędkarskich.
-Informacje dodatkowe
-Baza danych została zaprojektowana z myślą o prostocie i przechowywaniu wyłącznie niezbędnych informacji, aby zapewnić wydajność i łatwość obsługi.
+### Osoba niezalogowana
+- **Rejestracja:** Utworzenie konta przez podanie podstawowych danych (imię, e-mail, hasło).
+- **Logowanie:** Dostęp do aplikacji po zalogowaniu się.
 
-Wymagania systemowe
-Frontend:
+### Osoba zalogowana
+- **Notatki:** Tworzenie, przeglądanie oraz usuwanie notatek z wypraw wędkarskich.
+- **Pogoda:** Wyświetlanie prognozy pogody na podstawie lokalizacji GPS.
+- **Kalendarz brań:** Przeglądanie dni optymalnych na wędkowanie.
+- **Łowiska komercyjne:** Przeglądanie najlepszych łowisk w wybranych województwach.
+- **Okręgi PZW:** Wyświetlanie szczegółowych informacji o okręgach PZW w wybranym województwie.
+- **Wylogowanie:** Wylogowanie się z aplikacji.
 
-Node.js (v16 lub wyższy)
-Menedżer pakietów npm/yarn
-Backend:
+## Diagram przypadków użycia
+Aplikacja przewiduje dwa typy użytkowników: Gościa i Użytkownika. 
+Gość ma dostęp do funkcji rejestracji, natomiast Użytkownik po zalogowaniu uzyskuje dostęp do zaawansowanych funkcji.
 
-Java 17
-Spring Boot
-MySQL 8.0
-Instalacja
-Backend
-Skonfiguruj bazę danych MySQL z tabelami users i notes.
-Skopiuj plik application.properties i uzupełnij dane dostępowe do bazy danych.
-Uruchom aplikację backendową przy użyciu IDE lub komendy:
-bash
-Kopiuj
-Edytuj
-./mvnw spring-boot:run  
-Frontend
-Przejdź do katalogu aplikacji frontendowej.
-Zainstaluj zależności:
-bash
-Kopiuj
-Edytuj
-npm install  
-Uruchom serwer deweloperski:
-bash
-Kopiuj
-Edytuj
-npm start  
+## Baza danych
+- **System zarządzania bazą danych:** MySQL.
+- **Zakres danych przechowywanych w bazie:**
+  - Dane użytkowników (np. imię, e-mail, hasło).
+  - Notatki z wypraw wędkarskich.
+
+Baza danych jest zoptymalizowana do podstawowych potrzeb aplikacji i przechowuje tylko niezbędne informacje.
+
+## Wymagania systemowe
+- Node.js (dla uruchomienia frontendowej aplikacji React).
+- Java 11+ (dla Spring Boot backendu).
+- MySQL 8.0 lub nowszy.
+- Przeglądarka internetowa z obsługą nowoczesnych standardów (np. Chrome, Firefox).
+
+## Instrukcja uruchomienia
+
+### Backend
+1. Skonfiguruj bazę danych MySQL i utwórz odpowiednie tabele.
+2. Uruchom aplikację Spring Boot za pomocą polecenia: `mvn spring-boot:run`.
+
+### Frontend
+1. Zainstaluj zależności projektu za pomocą: `npm install`.
+2. Uruchom aplikację React za pomocą: `npm start`.
+
+## Autor
+Hubert Kapuściński 35679
